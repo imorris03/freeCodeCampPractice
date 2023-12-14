@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    color:white;
+    font-family: sans-serif;
+  }
+  
+  #title, #description {
+    text-align: center;
+  }
+  
+  #title {
+    margin-bottom: -5px;
+    margin-top: 30px;
+  }
+  
+  #description {
+    margin-bottom: 25px;
+  }
+  
+  div {
+    background-color: #222222;
+    margin: 0 auto;
+    width: 60vw;
+    max-width: 650px;
+    min-width: 350px;
+    padding: 1px 0 5px 0;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem;
+  }
+  
+  legend {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input, textarea, #dropdown {
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: white;
+    padding: 5px;
+    margin: 0.5em;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #222222;
+  }
+  
+  fieldset {
+    border: none;
+    border-bottom: 2px solid;
+    border-color: black;
+    margin: 1em;
+  }
+  
+  fieldset:last-of-type {
+    border: none;
+  }
+  
+  .satisfaction {
+    margin-top: -5px;
+    margin-bottom: 0px;
+  }
+  
+  #dropdown {
+    margin-top: .5em;
+    margin-bottom: 0.8em;
+  }
+  
+  .inline {
+    display: inline-block;
+    width: unset;
+  }
+  
+  input[type="submit"] {
+    color: white;
+    font-size: 1.1rem;
+    background-color: blue;
+    border: 0.5px solid;
+    border-color: white;
+    display: block;
+    width: 60%;
+    min-width: 250px;
+    margin: -.5em auto 1em auto;
+  }
+  
+  .feature {
+    width: unset;
+  }

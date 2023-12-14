@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css"/>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking time to complete this survey</p>
+    <div>
+    <form id="survey-form" method="get" action=''>
+      <fieldset>
+        <label for="name" id="name-label">Name: <input type="text" id="name" placeholder="ex. John Doe" required></label>
+        <label for="email" id="email-label">Email: <input type="email" placeholder="ex. email@example.com" id="email" required></label>
+        <label for="number" id="number-label">Age: <input type="number" min="18" max="120" placeholder="18" id="number"></label>
+      </fieldset>
+      <fieldset>
+        <label class="satisfaction">How satisfied are you with our services?
+        <select id="dropdown">
+          <option>Select an option</option>
+          <option>Very satisfied!</option>
+          <option>Satisfied</option>
+          <option>Dissapointed</option>
+          <option>It was awful.</option>
+        </label>
+        </select>
+        <legend>Would you recommend our services to a friend?</legend>
+        <label><input type="radio" name="refer" class="inline" value="definitely" checked> Definitely</label>
+        <label><input type="radio" name="refer"
+class="inline" value="possibly"> Possibly</label>
+        <label><input type="radio" name="refer" class="inline" value="probably not"> Probably not</label>
+        <legend>What were your favorite features included in our service?</legend>
+<label class="feature"><input type="checkbox" class="feature" value="one"> Feature one</label>
+<label class="feature"><input type="checkbox" class="feature" value="two"> Feature two</label>
+<label class="feature"><input type="checkbox" class="feature" value="three"> Feature three</label>
+<label class="feature"><input type="checkbox" class="feature" value="four"> Feature four</label>
+<label class="feature"><input type="checkbox" class="feature" value="five"> Feature five</label>
+      </fieldset>
+      <fieldset>
+  <legend>Tell us more about your experience: </legend>
+  <textarea rows="3" cols="30" placeholder="My experience was very..."></textarea>
+</fieldset>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+    </div>
+  </body>
+</html>
