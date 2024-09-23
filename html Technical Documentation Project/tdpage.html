@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="small-screen-header">HTML Documentation</h1>
+    <nav id="navbar">
+        <header>
+            <h1>HTML Documentation</h1>
+        </header>
+        <ul>
+            <li><a href="#what_you_should_already_know" class="nav-link">What you should already know</a></li>
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#element_anatomy" class="nav-link">Element anatomy</a></li>
+            <li><a href="#nesting_elements" class="nav-link">Nesting elements</a></li>
+            <li><a href="#element_attributes" class="nav-link">Element attributes</a></li>
+            <li><a href="#html_document_anatomy" class="nav-link">HTML document anatomy</a></li>
+            <li><a href="#reference" class="nav-link last">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section prereq" id="what_you_should_already_know">
+            <header>What you should already know</header>
+            <p>
+                Before starting this topic, you should have at least basic familiarity 
+                with using computers and using the web passively (i.e., just looking 
+                at it, consuming the content). You should have a basic work 
+                environment set up as detailed in Installing basic software, and 
+                understand how to create and manage files.
+            </p>
+            <p>After learning HTML, you can then move on to learning about more advanced topics such as:</p>
+            <ul>
+                <li>
+                    <b>CSS</b>, and how to use it to style HTML (for example, alter 
+                    your text size and fonts used, add borders and drop shadows, 
+                    layout your page with multiple columns, add animations and 
+                    other visual effects).
+                </li>
+                <li>
+                    <b>JavaScript</b>, and how to use it to add dynamic 
+                    functionality to web pages (for example, find your location 
+                    and plot it on a map, make UI elements appear/disappear 
+                    when you toggle a button, save users' data locally on their 
+                    computers, and much more).
+                </li>
+            </ul>
+        </section>
+        <section class="main-section intro" id="introduction">
+            <header>Introduction</header>
+            <p>
+                <dfn>HTML</dfn> (HyperText Markup Language) is a markup language that tells 
+                web browsers how to structure the web pages you visit. It can be as complicated 
+                or as simple as the web developer wants it to be. HTML consists of a series of 
+                elements, which you use to enclose, wrap, or mark up different parts of content 
+                to make it appear or act in a certain way. The enclosing tags can make content 
+                into a hyperlink to connect to another page, italicize words, and so on. For 
+                example, consider the following line of text:
+            </p>
+            <code>My cat is very grumpy</code>
+            <p>
+                If we wanted the text to stand by itself, we could specify that it is a paragraph 
+                by enclosing it in a paragraph (&lt;p&gt;) element:
+            </p>
+            <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+        </section>
+        <section class="main-section element_of_anatomy" id="element_anatomy">
+            <header>Element anatomy</header>
+            <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li><b>The opening tag:</b> This consists of the name of the element (in this 
+                    example, p for paragraph), wrapped in opening and closing angle brackets. 
+                    This opening tag marks where the element begins or starts to take effect. 
+                    In this example, it precedes the start of the paragraph text.</li>
+                <li><b>The content:</b> This is the content of the element. In this example, 
+                    it is the paragraph text.</li>
+                <li><b>The closing tag:</b> This is the same as the opening tag, except that 
+                    it includes a forward slash before the element name. This marks where the 
+                    element ends. Failing to include a closing tag is a common beginner error 
+                    that can produce peculiar results.</li>
+            </ul>
+            <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+        </section>
+        <section class="main-section nesting" id="nesting_elements">
+            <header>Nesting elements</header>
+            <p>
+                Elements can be placed within other elements. This is called nesting. If we 
+                wanted to state that our cat is very grumpy, we could wrap the word very in a 
+                &lt;strong&gt; element, which means that the word is to have strong(er) text 
+                formatting:
+            </p>
+            <code>&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+            <p>
+                There is a right and wrong way to do nesting. In the example above, we opened 
+                the p element first, then opened the strong element. For proper nesting, we 
+                should close the strong element first, before closing the p.
+            </p>
+            <p>The following is an example of the wrong way to do nesting:</p>
+            <code>&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+            <p>
+                The <b>tags have to open and close in a way that they are inside or outside one 
+                another</b>. With the kind of overlap in the example above, the browser has to guess 
+                at your intent. This kind of guessing can result in unexpected results.
+            </p>
+            <p>
+                Not all elements follow the pattern of opening tag, content, and closing tag. 
+                Some elements consist of a single line, which is typically used to insert/embed 
+                something into the document. Such elements are called void elements. Some examples
+                include: &lt;img&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;source&gt;, &lt;br&gt;, and 
+                &lt;hr&gt;.
+            </p>
+        </section>
+        <section class="main-section attributes" id="element_attributes">
+            <header>Element attributes</header>
+            <p>
+                Elements can also have attributes. Attributes contain extra information about the 
+                element that won't appear in the content. In this example, the class attribute is 
+                an identifying name used to target the element with style information.
+            </p>
+            <p>An attribute should have:</p>
+            <ul>
+                <li>A space between it and the element name. (For an element with more than one 
+                    attribute, the attributes should be separated by spaces too.)</li>
+                <li>The attribute name, followed by an equal sign.</li>
+                <li>An attribute value, wrapped with opening and closing quote marks.</li>
+            </ul>
+        </section>
+        <section class="main-section document_anatomy" id="html_document_anatomy">
+            <header>HTML document anatomy</header>
+            <p>
+                Individual HTML elements aren't very useful on their own. Next, let's examine how 
+                individual elements combine to form an entire HTML page:
+            </p>
+            <pre>
+                <code>
+&lt;!doctype html&gt;
+    &lt;html lang=&quot;en-US&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; &gt;
+        &lt;title&gt;My test page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is my page&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+            <p>Here we have:</p>
+            <ol>
+                <li>
+                    <b>&lt;!DOCTYPE html&gt;</b> — doctype. It is a required preamble. In the mists 
+                    of time, when HTML was young (around 1991/92), doctypes were meant to 
+                    act as links to a set of rules that the HTML page had to follow to be 
+                    considered good HTML, which could mean automatic error checking and other 
+                    useful things. However, these days, they don't do much and are basically 
+                    just needed to make sure your document behaves correctly. That's all you 
+                    need to know for now.
+                </li>
+                <li>
+                    <b>&lt;html&gt;&lt;/html&gt;</b>: The &lt;html&gt; element. This element wraps 
+                    all the content on the page. It is sometimes known as the root element.
+                </li>
+                <li>
+                    <b>&lt;head&gt;&lt;/head&gt;</b>: The &lt;head&gt; element. This element acts 
+                    as a container for everything you want to include on the HTML page, <b>that 
+                    isn't the content</b> the page will show to viewers. This includes keywords 
+                    and a page description that would appear in search results, CSS to style 
+                    content, character set declarations, and more. You will learn more about 
+                    this in the next article of the series.
+                </li>
+                <li>
+                    <b>&lt;meta charset=&quot;utf-8&quot;&gt;</b>: The &lt;meta&gt; element. 
+                    This element represents metadata that cannot be represented by other HTML 
+                    meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;script&gt;, 
+                    &lt;style&gt; or &lt;title&gt;. The charset attribute specifies the 
+                    character encoding for your document as UTF-8, which includes most 
+                    characters from the vast majority of human written languages. With this 
+                    setting, the page can now handle any textual content it might contain. 
+                    There is no reason not to set this, and it can help avoid some problems 
+                    later.
+                </li>
+                <li>
+                    <b>&lt;title&gt;&lt;/title&gt;</b>: The &lt;title&gt; element. This sets the 
+                    title of the page, which is the title that appears in the browser tab the 
+                    page is loaded in. The page title is also used to describe the page when 
+                    it is bookmarked.
+                </li>
+                <li>
+                    <b>&lt;body&gt;&lt;/body&gt;</b>: The &lt;body&gt; element. This contains all 
+                    the content that displays on the page, including text, images, videos, 
+                    games, playable audio tracks, or whatever else.
+                </li>
+            </ol>
+        </section>
+        <section class="main-section link" id="reference">
+            <header>Reference</header>
+            <ul>
+                <li>
+                    All the documentation from this page was taken from 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
